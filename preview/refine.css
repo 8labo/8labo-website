@@ -13,3 +13,26 @@
 .p003 #faq.parent-needs{background:#dceaf4!important}
 .p003 .renew-contact{background:#0b5ea8!important}
 @media(max-width:800px){.p003 .academy-renew-hero{background:#eef6fb!important}.p003 #needs.parent-needs{background:#dcecf7!important}.p003 #change{background:#fff!important}.p003 #program.parent-needs{background:#e6f1f8!important}.p003 .academy-gallery-section{background:#f8fbfd!important}.p003 #classes{background:#edf4f9!important}.p003 #classes+section{background:#fff!important}.p003 #classes+section+section{background:#e4eef5!important}.p003 #faq.parent-needs{background:#dceaf4!important}}
+
+/* P017 — definitive mobile layout pass */
+@media(max-width:800px){
+.p003 .featured-grid,.p003 .about-grid,.p003 .content-grid,.p003 .reason-grid,.p003 .value-grid,.p003 .entrance-grid,.p003 .contact-choice,.p003 .change-grid,.p003 .program-grid{grid-template-columns:1fr!important;display:grid!important;width:100%!important;max-width:none!important}
+.p003 .featured-grid{gap:28px!important;align-items:stretch!important}
+.p003 .featured-visual{width:100%!important;max-width:none!important;aspect-ratio:16/10!important;min-height:0!important;order:0!important}
+.p003 .featured-grid>div:last-child{width:100%!important;max-width:none!important;order:1!important;min-width:0!important}
+.p003 .featured h2,.p003 .featured p,.p003 .feature-points,.p003 .feature-points span{width:100%!important;max-width:none!important;min-width:0!important;white-space:normal!important;word-break:normal!important;overflow-wrap:break-word!important}
+.p003 .featured h2{font-size:clamp(1.6rem,7vw,2rem)!important;line-height:1.45!important}
+.p003 .featured h2 br{display:none!important}
+.p003 .about-grid{gap:28px!important}
+.p003 .about-copy{width:100%!important;max-width:none!important;min-width:0!important;order:1!important}
+.p003 .about-grid>div:first-child{width:100%!important;max-width:none!important;min-width:0!important;order:2!important}
+.p003 .about-copy h2,.p003 .about-copy p,.p003 .mv-block,.p003 .mv-block strong{width:100%!important;max-width:none!important;min-width:0!important;white-space:normal!important;word-break:normal!important;overflow-wrap:break-word!important}
+.p003 .about-copy h2{font-size:clamp(1.6rem,7vw,2rem)!important;line-height:1.45!important}
+.p003 .about-copy p{font-size:.92rem!important;line-height:1.9!important}
+.p003 .about-grid>div:first-child>.kicker{display:none!important}
+.p003 .about-copy:before{content:'ABOUT 8LABO';display:block;margin:0 0 16px;color:#79bdf3;font-size:.7rem;font-weight:800;letter-spacing:.17em}
+.p003 .mv-block strong{font-size:1.15rem!important;line-height:1.65!important}
+.p003 .content-grid,.p003 .reason-grid,.p003 .value-grid,.p003 .entrance-grid,.p003 .contact-choice{gap:14px!important}
+.p003 .content-card,.p003 .reason,.p003 .value-card,.p003 .entrance-card,.p003 .contact-choice a{width:100%!important;max-width:none!important;min-width:0!important}
+.p003 section{overflow:hidden}
+}
