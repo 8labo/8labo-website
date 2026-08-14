@@ -36,3 +36,4 @@
 .p003 .content-card,.p003 .reason,.p003 .value-card,.p003 .entrance-card,.p003 .contact-choice a{width:100%!important;max-width:none!important;min-width:0!important}
 .p003 section{overflow:hidden}
 }
+.p003 .preview-badge{font-size:0!important}.p003 .preview-badge:after{content:'PREVIEW P017';font-size:10px!important;font-weight:800;letter-spacing:.08em}
