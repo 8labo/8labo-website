@@ -1,0 +1,64 @@
+/* P020 — additive only. Preserve P019/P017 layout and adjust text flow without replacing prior CSS. */
+.p003 .section-head,
+.p003 .section-head p:last-child,
+.p003 .academy-reason .section-head .lead,
+.p003 #program .results-note,
+.p003 details p,
+.p003 .voice-empty p{
+  max-width:none!important;
+  width:100%!important;
+  min-width:0!important;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  text-wrap:wrap!important;
+}
+
+@media (min-width:801px){
+  .p003 .academy-renew-hero .wrap{
+    grid-template-columns:minmax(0,1.12fr) minmax(420px,.88fr)!important;
+    gap:48px!important;
+  }
+  .p003 .academy-renew-hero p{
+    max-width:none!important;
+    width:100%!important;
+  }
+  .p003 .academy-reason .section-head .lead{
+    max-width:none!important;
+    width:100%!important;
+  }
+}
+
+@media (max-width:800px){
+  .p003 .wrap{
+    width:calc(100% - 32px)!important;
+  }
+  .p003 .section-head,
+  .p003 .section-head p:last-child,
+  .p003 .academy-reason .section-head .lead,
+  .p003 #program .results-note,
+  .p003 details,
+  .p003 details p,
+  .p003 .voice-empty,
+  .p003 .voice-empty p{
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+  }
+  .p003 .academy-reason .section-head .lead,
+  .p003 .section-head p:last-child,
+  .p003 #program .results-note,
+  .p003 details p,
+  .p003 .voice-empty p{
+    text-align:left!important;
+    letter-spacing:0!important;
+    word-spacing:0!important;
+    white-space:normal!important;
+    word-break:normal!important;
+    overflow-wrap:break-word!important;
+    text-wrap:wrap!important;
+  }
+}
+
+.p003 .preview-badge{font-size:0!important}
+.p003 .preview-badge:after{content:'PREVIEW P020';font-size:10px!important;font-weight:800;letter-spacing:.08em}
