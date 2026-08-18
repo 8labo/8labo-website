@@ -1,49 +1,26 @@
 /* P019 base — Academy hierarchy and responsive layout */
 .p003 .academy-renew-hero{background:linear-gradient(135deg,#e5f1fa 0%,#f5f9fc 58%,#fff 100%)!important}.p003 #needs.parent-needs{background:#d7e9f5!important}.p003 #change{background:#fff!important}.p003 #program.parent-needs{background:#edf5fa!important}.p003 #program .program{background:#fff!important;border:1px solid #cbdde9!important;box-shadow:0 8px 22px rgba(7,59,104,.045)!important}.p003 .academy-gallery-section{background:#f7fafc!important;border:0!important}.p003 .academy-reason{background:#073b68!important}.p003 #classes{background:#e9f1f6!important}.p003 #classes .level-card{background:#fff!important;border:1px solid #b6cbd9!important;box-shadow:0 10px 28px rgba(7,59,104,.09)!important}.p003 #classes .level-header{background:#9fc9e2!important;border-bottom:1px solid #82b4d2!important}.p003 #classes .level-name{color:#073b68!important}.p003 #classes .level-subname{color:#3f657d!important}.p003 #classes .level-body{background:#fff!important}.p003 #classes .level-target{background:#edf4f8!important;border-left-color:#075ea8!important}.p003 #classes .class-card{background:#fff!important;border:1px solid #b8cedd!important;box-shadow:0 8px 22px rgba(7,59,104,.055)!important}.p003 #classes .class-card.preparing{background:#f6f8fa!important}.p003 #classes+section{background:#fff!important}.p003 #classes+section+section{background:#e7f0f6!important}.p003 #faq.parent-needs{background:#d7e7f2!important}.p003 .renew-contact{background:#0b5ea8!important}
 
-/* Header: never blend with page content */
-.p003 .site-header{mix-blend-mode:normal!important;isolation:isolate!important}.p003 .brand,.p003 .menu-button{mix-blend-mode:normal!important;text-shadow:none!important}
-
 @media(min-width:801px){.p003 .section-head p:last-child{max-width:none!important;width:100%!important}.p003 .academy-renew-hero .wrap{grid-template-columns:minmax(0,1.12fr) minmax(420px,.88fr)!important;gap:48px!important}.p003 .academy-renew-hero h1{font-size:clamp(2rem,3.25vw,3.2rem)!important;line-height:1.35!important}.p003 .academy-renew-hero p{max-width:none!important;width:100%!important}.p003 #needs .section-head,.p003 #change .section-head,.p003 #program .section-head,.p003 #classes .section-head,.p003 #classes+section .section-head,.p003 #classes+section+section .section-head,.p003 #faq .section-head{max-width:none!important;width:100%!important}.p003 #needs .section-head p:last-child,.p003 #change .section-head p:last-child,.p003 #program .section-head p:last-child,.p003 #classes .section-head p:last-child,.p003 #classes+section .section-head p:last-child,.p003 #classes+section+section .section-head p:last-child,.p003 #faq .section-head p:last-child,.p003 #program .results-note,.p003 .academy-reason .section-head .lead{max-width:none!important;width:100%!important}}
 
 @media(max-width:800px){
 /* shared page width */
 .p003 .wrap{width:calc(100% - 32px)!important;max-width:none!important;margin-left:16px!important;margin-right:16px!important}
 
-/* menu */
-.p003 .site-header{height:64px!important;padding:0 20px!important;background:#0a0a0a!important;color:#fff!important;border-bottom:1px solid rgba(255,255,255,.12)!important;position:relative!important;z-index:1000!important}
-.p003 .brand,.p003 .menu-button{color:#fff!important;opacity:1!important}.p003 .menu-button{font-size:.8rem!important;font-weight:800!important;letter-spacing:.12em!important}
+/* menu — mobile only */
+.p003 .site-header{height:64px!important;padding:0 20px!important;background:#0a0a0a!important;color:#fff!important;border-bottom:1px solid rgba(255,255,255,.12)!important;position:relative!important;z-index:1000!important;mix-blend-mode:normal!important;isolation:isolate!important}
+.p003 .brand,.p003 .menu-button{color:#fff!important;opacity:1!important;mix-blend-mode:normal!important;text-shadow:none!important}.p003 .menu-button{font-size:.8rem!important;font-weight:800!important;letter-spacing:.12em!important}
 .p003 .global-nav{display:none!important;position:absolute!important;top:64px!important;left:0!important;right:0!important;width:100%!important;min-width:0!important;margin:0!important;padding:8px 20px 16px!important;background:#071b33!important;color:#fff!important;border:0!important;border-top:1px solid rgba(255,255,255,.12)!important;box-shadow:0 16px 32px rgba(0,0,0,.28)!important;mix-blend-mode:normal!important;z-index:1001!important}
 .p003 .global-nav.is-open{display:flex!important;flex-direction:column!important;gap:0!important}
 .p003 .global-nav a{display:block!important;width:100%!important;padding:14px 2px!important;margin:0!important;color:#fff!important;opacity:1!important;background:transparent!important;border:0!important;border-bottom:1px solid rgba(255,255,255,.14)!important;font-size:.88rem!important;font-weight:700!important;line-height:1.45!important;letter-spacing:.03em!important;text-shadow:none!important;white-space:normal!important}
 .p003 .global-nav a:last-child{border-bottom:0!important}
 .p003.menu-open{overflow:hidden!important}
 
-/* all major grids become one column */
-.p003 .entrance-grid,.p003 .value-grid,.p003 .featured-grid,.p003 .reason-grid,.p003 .about-grid,.p003 .content-grid,.p003 .contact-choice,.p003 .change-grid,.p003 .program-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;width:100%!important;max-width:none!important}
-.p003 .featured-grid{gap:28px!important}.p003 .featured-visual{grid-column:1!important;grid-row:auto!important;width:100%!important;max-width:none!important;min-width:0!important;aspect-ratio:16/10!important}.p003 .featured-grid>div:last-child{grid-column:1!important;grid-row:auto!important;width:100%!important;max-width:none!important;min-width:0!important}
-.p003 .about-grid{gap:28px!important}.p003 .about-copy{order:1!important;width:100%!important;max-width:none!important;min-width:0!important}.p003 .about-grid>div:first-child{order:2!important;width:100%!important;max-width:none!important;min-width:0!important}.p003 .about-grid>div:first-child>.kicker{display:none!important}.p003 .about-copy:before{content:'ABOUT 8LABO';display:block;margin:0 0 16px;color:#79bdf3;font-size:.7rem;font-weight:800;letter-spacing:.17em}
-
-/* natural wrapping across the entire home page */
-.p003 .hero-copybox,.p003 .hero-copybox h1,.p003 .hero-copybox .mission,.p003 .hero-copybox .hero-text,
-.p003 .section-head,.p003 .section-head h2,.p003 .section-head p:last-child,
-.p003 .entrance-copy,.p003 .entrance-copy h3,.p003 .entrance-copy p,
-.p003 .need-item,.p003 .value-card,.p003 .value-card h3,.p003 .value-card p,
-.p003 .featured h2,.p003 .featured p,.p003 .feature-points,.p003 .feature-points span,
-.p003 .reason,.p003 .reason h3,.p003 .reason p,
-.p003 .activity-results .section-head,.p003 .activity-results .section-head h2,.p003 .activity-results .section-head p,.p003 .results-note,
-.p003 .voice-empty,.p003 .voice-empty strong,.p003 .voice-empty p,
-.p003 .about-copy,.p003 .about-copy h2,.p003 .about-copy p,.p003 .mv-block,.p003 .mv-block strong,
-.p003 .content-card,.p003 .content-card h3,.p003 .content-card p,
-.p003 .renew-contact h2,.p003 .renew-contact p,.p003 .contact-choice a,.p003 .contact-choice strong,.p003 .contact-choice span{
-width:100%!important;max-width:none!important;min-width:0!important;white-space:normal!important;word-break:normal!important;overflow-wrap:break-word!important;text-wrap:wrap!important;text-align:left!important;text-align-last:auto!important}
-.p003 .featured h2 br{display:none!important}
-.p003 .about-copy h2{font-size:clamp(1.6rem,7vw,2rem)!important;line-height:1.45!important}.p003 .about-copy p{font-size:.92rem!important;line-height:1.9!important}.p003 .mv-block strong{font-size:1.15rem!important;line-height:1.65!important}
-.p003 .content-grid,.p003 .reason-grid,.p003 .value-grid,.p003 .entrance-grid,.p003 .contact-choice{gap:14px!important}.p003 .content-card,.p003 .reason,.p003 .value-card,.p003 .entrance-card,.p003 .contact-choice a{width:100%!important;max-width:none!important;min-width:0!important}
-
-/* Academy mobile colors/layout kept from improved state */
-.p003 .academy-renew-hero{background:#eef6fb!important}.p003 #needs.parent-needs{background:#d7e9f5!important}.p003 #change{background:#fff!important}.p003 #program.parent-needs{background:#edf5fa!important}.p003 .academy-gallery-section{background:#f7fafc!important}.p003 #classes{background:#e9f1f6!important}.p003 #classes+section{background:#fff!important}.p003 #classes+section+section{background:#e7f0f6!important}.p003 #faq.parent-needs{background:#d7e7f2!important}
+/* text width */
+.p003 .section-head,.p003 .section-head p:last-child,.p003 .hero-copybox,.p003 .hero-copybox .hero-text,.p003 .entrance-copy,.p003 .value-card,.p003 .value-card p,.p003 .featured-grid>div:last-child,.p003 .featured h2,.p003 .featured p,.p003 .feature-points,.p003 .feature-points span,.p003 .reason,.p003 .reason p,.p003 .activity-results .section-head,.p003 .activity-results .section-head p:last-child,.p003 .results-note,.p003 .voice-empty,.p003 .voice-empty p,.p003 .about-copy,.p003 .about-copy h2,.p003 .about-copy p,.p003 .mv-block,.p003 .mv-block strong,.p003 .content-card,.p003 .content-card p,.p003 .renew-contact .wrap>p,.p003 .contact-choice,.p003 .contact-choice a{width:100%!important;max-width:none!important;min-width:0!important;white-space:normal!important;word-break:normal!important;overflow-wrap:break-word!important;text-wrap:wrap!important}
+.p003 .section-head p:last-child,.p003 .hero-copybox .hero-text,.p003 .entrance-copy p,.p003 .value-card p,.p003 .featured p,.p003 .feature-points span,.p003 .reason p,.p003 .activity-results .section-head p:last-child,.p003 .results-note,.p003 .voice-empty p,.p003 .about-copy p,.p003 .content-card p,.p003 .renew-contact .wrap>p{letter-spacing:0!important;word-spacing:0!important;text-align:left!important}
+.p003 .featured-grid,.p003 .about-grid,.p003 .content-grid,.p003 .reason-grid,.p003 .value-grid,.p003 .entrance-grid,.p003 .contact-choice,.p003 .change-grid,.p003 .program-grid{grid-template-columns:1fr!important;display:grid!important;width:100%!important;max-width:none!important}
+.p003 .featured-grid{gap:28px!important}.p003 .featured-visual{width:100%!important;aspect-ratio:16/10!important;grid-column:1!important}.p003 .featured-grid>div:last-child{grid-column:1!important}.p003 .featured h2 br{display:none!important}
+.p003 .about-grid{gap:28px!important}.p003 .about-copy{order:1!important}.p003 .about-grid>div:first-child{order:2!important;width:100%!important;max-width:none!important}.p003 .about-grid>div:first-child>.kicker{display:none!important}.p003 .about-copy:before{content:'ABOUT 8LABO';display:block;margin:0 0 16px;color:#79bdf3;font-size:.7rem;font-weight:800;letter-spacing:.17em}.p003 .about-copy h2{font-size:clamp(1.6rem,7vw,2rem)!important;line-height:1.45!important}.p003 .about-copy p{font-size:.92rem!important;line-height:1.9!important}.p003 .mv-block strong{font-size:1.15rem!important;line-height:1.65!important}
 .p003 section{overflow:hidden}
 }
-
-.p003 .preview-badge{font-size:0!important}.p003 .preview-badge:after{content:'PREVIEW P022';font-size:10px!important;font-weight:800;letter-spacing:.08em}
