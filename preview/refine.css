@@ -23,7 +23,7 @@
 .p003 .featured-grid{gap:28px!important}.p003 .featured-visual{width:100%!important;aspect-ratio:16/10!important;grid-column:1!important}.p003 .featured-grid>div:last-child{grid-column:1!important}.p003 .featured h2 br{display:none!important}
 .p003 .about-grid{gap:28px!important}.p003 .about-copy{order:1!important}.p003 .about-grid>div:first-child{order:2!important;width:100%!important;max-width:none!important}.p003 .about-grid>div:first-child>.kicker{display:none!important}.p003 .about-copy:before{content:'ABOUT 8LABO';display:block;margin:0 0 16px;color:#79bdf3;font-size:.7rem;font-weight:800;letter-spacing:.17em}.p003 .about-copy h2{font-size:clamp(1.6rem,7vw,2rem)!important;line-height:1.45!important}.p003 .about-copy p{font-size:.92rem!important;line-height:1.9!important}.p003 .mv-block strong{font-size:1.15rem!important;line-height:1.65!important}
 
-/* mobile entrance cards: restore original band width; give copy a little more usable room */
+/* mobile entrance cards: original band width + tuned KIDS/LIFE copy width */
 .p003 .entrance-grid .entrance-card{grid-template-columns:82px minmax(0,1fr)!important;min-height:0!important}
 .p003 .entrance-grid .entrance-visual{width:82px!important;min-width:82px!important;padding:0 4px!important;font-size:1.2rem!important;line-height:1!important;white-space:nowrap!important;overflow:visible!important}
 .p003 .entrance-grid .entrance-copy{min-width:0!important;padding:20px 16px!important}
@@ -31,14 +31,25 @@
 .p003 .entrance-grid .entrance-copy p{font-size:.82rem!important;line-height:1.75!important;margin-bottom:13px!important}
 .p003 .entrance-grid .entrance-copy .mini-link{font-size:.78rem!important;line-height:1.55!important}
 .p003 .entrance-grid .entrance-copy h3,.p003 .entrance-grid .entrance-copy p,.p003 .entrance-grid .entrance-copy .mini-link{width:100%!important;max-width:none!important;min-width:0!important;white-space:normal!important;word-break:normal!important;overflow-wrap:break-word!important;letter-spacing:0!important}
+.p003 .entrance-grid .entrance-card:nth-child(1) .entrance-copy,.p003 .entrance-grid .entrance-card:nth-child(3) .entrance-copy{padding-right:8px!important}
+.p003 .entrance-grid .entrance-card:nth-child(1) .entrance-copy p,.p003 .entrance-grid .entrance-card:nth-child(3) .entrance-copy p{font-size:.79rem!important;letter-spacing:-.01em!important}
 
-/* mobile activity photos: compact grid with no artificial empty lower-right cell */
+/* mobile activity photos: retain all five slots; first large + four small */
 .p003 .activity-results .activity-photo-grid{grid-template-columns:1fr 1fr!important;grid-template-rows:auto!important;grid-auto-rows:auto!important;gap:10px!important;align-items:start!important}
 .p003 .activity-results .activity-photo-grid .activity-photo{min-height:0!important;height:auto!important;aspect-ratio:4/3!important;padding:0!important;background-color:transparent!important;background-size:cover!important;background-position:var(--cms-mx,50%) var(--cms-my,50%)!important}
 .p003 .activity-results .activity-photo-grid .activity-photo:first-child{grid-column:1/3!important;grid-row:auto!important;aspect-ratio:16/9!important}
-.p003 .activity-results .activity-photo-grid .activity-photo:nth-child(5){grid-column:auto!important;grid-row:auto!important;aspect-ratio:4/3!important}
-.p003 .activity-results .activity-photo-grid .activity-photo:not(.cms-photo){display:none!important}
-.p003 .activity-results .activity-photo-grid .activity-photo:nth-child(4):has(+ .activity-photo:not(.cms-photo)){grid-column:1/3!important;aspect-ratio:16/9!important}
+.p003 .activity-results .activity-photo-grid .activity-photo:nth-child(5){display:flex!important;grid-column:auto!important;grid-row:auto!important;aspect-ratio:4/3!important}
+.p003 .activity-results .activity-photo-grid .activity-photo:not(.cms-photo){display:flex!important;align-items:flex-end!important;padding:14px!important;background:#e8eef3!important;color:#657080!important}
 
 .p003 section{overflow:hidden}
+}
+
+/* Desktop home titles: use one line where space allows; mobile keeps current breaks */
+@media(min-width:801px){
+.p003 .renew-hero h1 br,
+.p003 #services .section-head h2 br,
+.p003 #activity .section-head h2 br{display:none!important}
+.p003 .renew-hero h1,
+.p003 #services .section-head h2,
+.p003 #activity .section-head h2{max-width:none!important;white-space:nowrap!important}
 }
