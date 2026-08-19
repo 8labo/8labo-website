@@ -53,3 +53,6 @@
 .p003 #services .section-head h2,
 .p003 #activity .section-head h2{max-width:none!important;white-space:nowrap!important}
 }
+
+/* Keep the intended two-line ACADEMY featured heading on all screen sizes */
+.p003 .featured h2 br{display:block!important}
