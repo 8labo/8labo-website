@@ -24,10 +24,6 @@
 .p003 .entrance-grid .entrance-copy p{font-size:.82rem!important;line-height:1.75!important;margin-bottom:13px!important}
 .p003 .entrance-grid .entrance-copy .mini-link{font-size:.78rem!important;line-height:1.55!important}
 .p003 .entrance-grid .entrance-copy h3,.p003 .entrance-grid .entrance-copy p,.p003 .entrance-grid .entrance-copy .mini-link{width:100%!important;max-width:none!important;min-width:0!important;white-space:normal!important;word-break:normal!important;overflow-wrap:break-word!important;letter-spacing:0!important}
-.p003 .entrance-grid .entrance-card:nth-child(1) .entrance-copy,
-.p003 .entrance-grid .entrance-card:nth-child(3) .entrance-copy{padding-right:4px!important}
-.p003 .entrance-grid .entrance-card:nth-child(1) .entrance-copy p,
-.p003 .entrance-grid .entrance-card:nth-child(3) .entrance-copy p{font-size:.81rem!important;letter-spacing:-.02em!important;line-break:strict!important;overflow-wrap:normal!important;word-break:normal!important;width:calc(100% + 4px)!important}
 .p003 .activity-results .activity-photo-grid{grid-template-columns:1fr 1fr!important;grid-template-rows:auto!important;grid-auto-rows:auto!important;gap:10px!important;align-items:start!important}
 .p003 .activity-results .activity-photo-grid .activity-photo{min-height:0!important;height:auto!important;aspect-ratio:4/3!important;padding:0!important;background-color:transparent!important;background-size:cover!important;background-position:var(--cms-mx,50%) var(--cms-my,50%)!important}
 .p003 .activity-results .activity-photo-grid .activity-photo:first-child{grid-column:1/3!important;grid-row:auto!important;aspect-ratio:16/9!important}
