@@ -39,7 +39,7 @@
 @media(min-width:801px){
 .p003 .renew-hero .hero-grid{grid-template-columns:56% 44%!important;min-height:620px!important}
 .p003 .renew-hero .photo-stage{min-height:620px!important;height:auto!important;align-self:stretch!important}
-.p003 .renew-hero h1{max-width:none!important;white-space:normal!important;font-size:clamp(2.05rem,3.35vw,3.2rem)!important;line-height:1.22!important;letter-spacing:-.04em!important}
+.p003 .renew-hero h1{max-width:none!important;white-space:normal!important;font-size:clamp(2rem,3.25vw,3.2rem)!important;line-height:1.22!important;letter-spacing:-.04em!important}
 .p003 .renew-hero h1 br{display:block!important}
 .p003 .renew-hero h1 .keep{white-space:nowrap!important}
 .p003 #services .section-head h2 br,
