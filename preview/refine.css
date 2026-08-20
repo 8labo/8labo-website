@@ -37,10 +37,11 @@
 }
 
 @media(min-width:801px){
-.p003 .renew-hero h1 br,
+.p003 .renew-hero h1{max-width:none!important;white-space:normal!important;font-size:clamp(2.65rem,4.65vw,4.45rem)!important;line-height:1.12!important;letter-spacing:-.045em!important}
+.p003 .renew-hero h1 br{display:block!important}
+.p003 .renew-hero h1 .keep{white-space:nowrap!important}
 .p003 #services .section-head h2 br,
 .p003 #activity .section-head h2 br{display:none!important}
-.p003 .renew-hero h1,
 .p003 #services .section-head h2,
 .p003 #activity .section-head h2{max-width:none!important;white-space:nowrap!important}
 .p003 .content-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
