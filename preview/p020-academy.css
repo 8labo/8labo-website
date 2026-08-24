@@ -14,8 +14,25 @@
   text-wrap:wrap!important;
 }
 
-/* Visually separate CLASS & LEVEL from CURRENT CLASSES without changing card UI. */
-.p003 #classes{background:linear-gradient(to bottom,#e9f1f6 0,#e9f1f6 49%,#f4f5f6 49%,#f4f5f6 100%)!important}
+/* CLASS & LEVEL and CURRENT CLASSES are treated as two clear visual sections. */
+.p003 #classes{background:#dfeef7!important;overflow:hidden!important}
+.p003 #classes>.wrap>.section-head[style*="margin-top:70px"]{
+  position:relative!important;
+  margin-top:70px!important;
+  padding-top:64px!important;
+  background:#f8fafc!important;
+  box-shadow:0 0 0 100vmax #f8fafc!important;
+  clip-path:inset(0 -100vmax)!important;
+}
+.p003 #classes>.wrap>.class-grid{
+  position:relative!important;
+  margin-top:0!important;
+  padding-top:30px!important;
+  padding-bottom:18px!important;
+  background:#f8fafc!important;
+  box-shadow:0 0 0 100vmax #f8fafc!important;
+  clip-path:inset(0 -100vmax)!important;
+}
 
 /* Desktop: explicitly restore the approved card designs. */
 @media (min-width:801px){
@@ -34,7 +51,7 @@
   .p003 #classes .level-target{display:inline-block!important;align-self:flex-start!important;width:auto!important;margin:0 0 18px!important;padding:6px 10px!important;background:#edf4f8!important;border-left:3px solid #075ea8!important;color:#315b7a!important;font-size:.72rem!important;font-weight:700!important;line-height:1.45!important}
   .p003 #classes .level-body>p:last-child{margin:auto 0 0!important;font-size:.86rem!important;line-height:1.8!important}
 
-  .p003 #classes .class-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important;margin-top:30px!important}
+  .p003 #classes .class-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important}
   .p003 #classes .class-card{display:block!important;padding:26px 24px 28px!important;background:#fff!important;border:1px solid #b8cedd!important;border-radius:4px!important;box-shadow:0 8px 22px rgba(7,59,104,.055)!important}
   .p003 #classes .class-card.preparing{background:#f6f8fa!important}
   .p003 #classes .class-meta{display:flex!important;flex-direction:row!important;align-items:center!important;flex-wrap:wrap!important;gap:8px!important;margin:0 0 18px!important}
@@ -55,6 +72,9 @@
   .p003 .academy-reason .section-head .lead,.p003 .section-head p:last-child,.p003 #program .results-note,.p003 details p,.p003 .voice-empty p{text-align:left!important;letter-spacing:0!important;word-spacing:0!important;white-space:normal!important;word-break:normal!important;overflow-wrap:break-word!important;text-wrap:wrap!important}
   .p003 .academy-reason .section-head .lead .sentence,.p003 .academy-reason .reason-intro span{display:inline!important;white-space:normal!important;margin:0!important}
 
+  .p003 #classes>.wrap>.section-head[style*="margin-top:70px"]{margin-top:54px!important;padding-top:48px!important}
+  .p003 #classes>.wrap>.class-grid{padding-top:26px!important;padding-bottom:10px!important}
+
   .p003 #classes .level-grid{display:grid!important;grid-template-columns:1fr!important;gap:16px!important}
   .p003 #classes .level-card{display:block!important;overflow:hidden!important;background:#fff!important;border:1px solid #b6cbd9!important;border-radius:4px!important;box-shadow:0 8px 22px rgba(7,59,104,.07)!important}
   .p003 #classes .level-header{display:flex!important;flex-direction:row!important;align-items:center!important;gap:14px!important;min-height:0!important;padding:18px 20px!important;background:#9fc9e2!important;border-bottom:1px solid #82b4d2!important}
@@ -67,7 +87,7 @@
   .p003 #classes .level-target{display:inline-block!important;width:auto!important;margin:0 0 17px!important;padding:6px 10px!important;background:#edf4f8!important;border-left:3px solid #075ea8!important;color:#315b7a!important;font-size:.72rem!important;font-weight:700!important;line-height:1.45!important}
   .p003 #classes .level-body>p:last-child{margin:0!important;font-size:.86rem!important;line-height:1.8!important}
 
-  .p003 #classes .class-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important;margin-top:26px!important}
+  .p003 #classes .class-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}
   .p003 #classes .class-card{display:block!important;padding:22px 20px 24px!important;background:#fff!important;border:1px solid #b8cedd!important;box-shadow:0 6px 18px rgba(7,59,104,.045)!important}
   .p003 #classes .class-meta{display:flex!important;flex-direction:row!important;align-items:center!important;flex-wrap:wrap!important;gap:8px!important;margin:0 0 18px!important}
   .p003 #classes .day-badge,.p003 #classes .level-badge,.p003 #classes .status-inline{display:inline-flex!important;width:auto!important;min-height:28px!important;align-items:center!important;padding:5px 10px!important;font-size:.72rem!important;font-weight:800!important;line-height:1!important}
