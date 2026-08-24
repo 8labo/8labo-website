@@ -14,6 +14,9 @@
   text-wrap:wrap!important;
 }
 
+/* Visually separate CLASS & LEVEL from CURRENT CLASSES without changing card UI. */
+.p003 #classes{background:linear-gradient(to bottom,#e9f1f6 0,#e9f1f6 49%,#f4f5f6 49%,#f4f5f6 100%)!important}
+
 /* Desktop: explicitly restore the approved card designs. */
 @media (min-width:801px){
   .p003 .academy-renew-hero .wrap{grid-template-columns:minmax(0,1.12fr) minmax(420px,.88fr)!important;gap:48px!important}
@@ -45,7 +48,7 @@
   .p003 #classes .class-info span{display:block!important;width:auto!important;min-width:0!important;margin:0!important;font-size:.86rem!important;line-height:1.6!important}
 }
 
-/* Mobile: do not change — retain the approved layout and cards. */
+/* Mobile: retain the approved layout and cards. */
 @media (max-width:800px){
   .p003 .wrap{width:calc(100% - 32px)!important}
   .p003 .section-head,.p003 .section-head p:last-child,.p003 .academy-reason .section-head .lead,.p003 #program .results-note,.p003 details,.p003 details p,.p003 .voice-empty,.p003 .voice-empty p{width:100%!important;max-width:none!important;min-width:0!important}
