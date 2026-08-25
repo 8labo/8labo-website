@@ -14,24 +14,28 @@
   text-wrap:wrap!important;
 }
 
-/* CLASS & LEVEL and CURRENT CLASSES are treated as two clear visual sections. */
-.p003 #classes{background:#dfeef7!important;overflow:hidden!important}
+/* Keep the whole classes area clean; remove the full-width box-shadow/clip-path bands. */
+.p003 #classes{background:#f8fafc!important;overflow:hidden!important}
+.p003 #classes>.wrap>.section-head:first-child{
+  position:relative!important;
+  padding-bottom:18px!important;
+}
 .p003 #classes>.wrap>.section-head[style*="margin-top:70px"]{
   position:relative!important;
   margin-top:70px!important;
   padding-top:64px!important;
-  background:#f8fafc!important;
-  box-shadow:0 0 0 100vmax #f8fafc!important;
-  clip-path:inset(0 -100vmax)!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  clip-path:none!important;
 }
 .p003 #classes>.wrap>.class-grid{
   position:relative!important;
   margin-top:0!important;
   padding-top:30px!important;
   padding-bottom:18px!important;
-  background:#f8fafc!important;
-  box-shadow:0 0 0 100vmax #f8fafc!important;
-  clip-path:inset(0 -100vmax)!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  clip-path:none!important;
 }
 
 /* Desktop: explicitly restore the approved card designs. */
@@ -97,4 +101,4 @@
   .p003 #classes .class-info b{font-size:.74rem!important;color:#657080!important}.p003 #classes .class-info span{display:block!important;width:auto!important;min-width:0!important;margin:0!important;font-size:.86rem!important;line-height:1.6!important}
 }
 
-.p003 .preview-badge{font-size:0!important}.p003 .preview-badge:after{content:'PREVIEW P023';font-size:10px!important;font-weight:800;letter-spacing:.08em}
+.p003 .preview-badge{font-size:0!important}.p003 .preview-badge:after{content:'PREVIEW P024';font-size:10px!important;font-weight:800;letter-spacing:.08em}
