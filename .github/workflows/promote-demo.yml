@@ -39,16 +39,19 @@ jobs:
           rm -rf _demo
           rm -f PREVIEW_CHANGELOG.md ACADEMY_STABLE_SPEC.md
 
-      - name: Remove preview-only labels
+      - name: Remove preview-only labels and bust production JS cache
         shell: bash
         run: |
           python - <<'PY'
           from pathlib import Path
           import re
 
+          version = 'prod-20260901-1'
           for path in Path('.').glob('*.html'):
               text = path.read_text(encoding='utf-8')
               text = re.sub(r'<div class="preview-badge">PREVIEW\s+P\d+</div>', '', text)
+              text = re.sub(r'src="script\.js(?:\?v=[^"]+)?"', f'src="script.js?v={version}"', text)
+              text = re.sub(r'src="about-profile-photo\.js(?:\?v=[^"]+)?"', f'src="about-profile-photo.js?v={version}"', text)
               path.write_text(text, encoding='utf-8')
           PY
 
