@@ -1,0 +1,66 @@
+name: Promote demo to production
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/promote-demo.yml'
+      - '.promote-demo'
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout production repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout demo repository
+        uses: actions/checkout@v4
+        with:
+          repository: 8labo/8labo-website.demo
+          ref: main
+          path: _demo
+
+      - name: Replace production files with current preview
+        shell: bash
+        run: |
+          find . -mindepth 1 -maxdepth 1 \
+            ! -name '.git' \
+            ! -name '.github' \
+            ! -name 'CNAME' \
+            ! -name '_demo' \
+            -exec rm -rf {} +
+          cp -a _demo/preview/. .
+          rm -rf _demo
+          rm -f PREVIEW_CHANGELOG.md ACADEMY_STABLE_SPEC.md
+
+      - name: Remove preview-only labels
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          for path in Path('.').glob('*.html'):
+              text = path.read_text(encoding='utf-8')
+              text = re.sub(r'<div class="preview-badge">PREVIEW\s+P\d+</div>', '', text)
+              path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit production update
+        shell: bash
+        run: |
+          git config user.name '8LABO Production Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No production changes to publish.'
+          else
+            git commit -m 'Promote current demo preview to production'
+            git push
+          fi
