@@ -1,5 +1,41 @@
-/* P073 — home base + shared consistency + canonical site header. */
-@import url('./home-p051-base.css');
+/* P095 — home base + shared consistency + canonical site header. */
+@import url('./home-p051-base.css?v=p092');
 @import url('./p051-consistency.css?v=p073');
 @import url('./mobile-header.css?v=p066');
 @import url('./header-p071.css?v=p073');
+
+/* Home hero heading is owned here, not by generic text wrapping. */
+.home-page .home-hero h1{
+  font-size:clamp(44px,3.28vw,53px);
+}
+.home-page .home-hero h1 .home-hero-line{
+  display:block;
+  white-space:nowrap;
+}
+
+/* Mobile text baseline:
+   body/description copy uses the full width of its own content area.
+   Headings are intentionally excluded and keep their page-specific layout. */
+@media(max-width:800px){
+  .home-page .home-hero h1{
+    font-size:clamp(27px,7.2vw,31px)!important;
+  }
+  .home-page .home-hero h1 .home-hero-line{
+    white-space:nowrap;
+  }
+  .home-page .section-head>p:last-child,
+  .home-page .home-hero .hero-text,
+  .home-page .entrance-copy p,
+  .home-page .value-card p,
+  .home-page .featured p,
+  .home-page .reason p,
+  .home-page .about-copy p,
+  .home-page .content-card p,
+  .home-page .renew-contact>.wrap>p{
+    width:100%;
+    max-width:none;
+    min-width:0;
+    white-space:normal;
+    text-wrap:wrap;
+  }
+}
